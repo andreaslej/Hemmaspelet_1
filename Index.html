@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplikationsmästaren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏆 Multiplikationsmästaren</h1>
+
+    <div id="start-screen">
+        <h2>Välj namn</h2>
+
+        <select id="playerName">
+            <option value="">Välj...</option>
+            <option>Alva</option>
+            <option>Hugo</option>
+            <option>Nils</option>
+        </select>
+
+        <button onclick="startQuiz()">Starta</button>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+
+        <h2>Fråga <span id="questionNumber">1</span>/20</h2>
+
+        <div class="question" id="questionText"></div>
+
+        <input
+            type="number"
+            id="answerInput"
+            placeholder="Ditt svar">
+
+        <button onclick="submitAnswer()">Nästa</button>
+
+    </div>
+
+    <div id="result-screen" class="hidden">
+
+        <h2>🎉 Klart!</h2>
+
+        <p id="resultText"></p>
+
+        <button onclick="location.reload()">
+            Spela igen
+        </button>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
